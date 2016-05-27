@@ -13,16 +13,16 @@ public class MainActivity extends AppCompatActivity {
         //我是一个注释
     }
 
-    private  long lastTime;
+    private long lastTime;
+
     @Override
     public void onBackPressed() {
-        long ct= System.currentTimeMillis();
-        if(ct-lastTime>2000){
-            Toast.makeText(this,"再按返回键 退出",Toast.LENGTH_SHORT).show();;
-
-        }else {
+        long ct = System.currentTimeMillis();
+        if (ct - lastTime > 2000) {
+            Toast.makeText(this, "再按返回键 退出", Toast.LENGTH_SHORT).show();
+            lastTime=ct;
+        } else {
             super.onBackPressed();
         }
-
     }
 }
